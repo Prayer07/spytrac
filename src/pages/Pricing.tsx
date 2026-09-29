@@ -11,10 +11,10 @@ export default function Pricing() {
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Pricing' }]} />
         <span className="eyebrow">Pricing</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
-          Plan names stay flexible. What you need doesn't.
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">
+          Subscription & Plans, stay flexible.
         </h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">
+        <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">
           Every plan includes hardware compatibility guidance and installation support. Add-ons
           and modules can be layered onto any tier as your fleet grows.
         </p>
@@ -29,17 +29,17 @@ export default function Pricing() {
                 plan.highlighted ? 'border-teal-600 bg-teal-700 text-white shadow-panel' : 'border-teal-900/10 bg-white'
               }`}
             >
-              <h2 className={`font-display text-xl font-semibold ${plan.highlighted ? 'text-white' : 'text-ink'}`}>
+              <h2 className={`font-serif text-xl font-semibold ${plan.highlighted ? 'text-white' : 'text-ink'}`}>
                 {plan.name}
               </h2>
-              <p className={`mt-1 text-sm ${plan.highlighted ? 'text-teal-100' : 'text-ink-soft/70'}`}>
+              <p className={`mt-1 font-sans text-sm ${plan.highlighted ? 'text-teal-100' : 'text-ink-soft/70'}`}>
                 {plan.positioning}
               </p>
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.features.map((f) => (
                   <li
                     key={f}
-                    className={`flex items-start gap-2 text-sm ${plan.highlighted ? 'text-teal-50' : 'text-ink-soft/80'}`}
+                    className={`flex items-start font-sans gap-2 text-sm ${plan.highlighted ? 'text-teal-50' : 'text-ink-soft/80'}`}
                   >
                     <svg
                       className={`mt-0.5 h-4 w-4 flex-shrink-0 ${plan.highlighted ? 'text-sky-300' : 'text-teal-600'}`}
@@ -67,14 +67,14 @@ export default function Pricing() {
       </section>
 
       <section className="container-page pb-16">
-        <h2 className="font-display text-2xl font-semibold text-ink">Feature comparison</h2>
+        <h2 className="font-serif text-2xl font-semibold text-ink">Feature comparison</h2>
         <div className="mt-6 overflow-x-auto rounded-2xl border border-teal-900/10">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-teal-900/10 bg-teal-50/60">
                 <th className="px-5 py-3 font-medium text-ink-soft/70">Feature</th>
                 {pricingPlans.map((p) => (
-                  <th key={p.slug} className="px-5 py-3 text-center font-medium text-ink-soft/70">
+                  <th key={p.slug} className="px-5 py-3 font-sans text-center font-medium text-ink-soft/70">
                     {p.name}
                   </th>
                 ))}
@@ -98,7 +98,7 @@ export default function Pricing() {
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-sm text-ink-soft/60">
+        <p className="mt-4 text-sm font-sans text-ink-soft/60">
           Hardware and installation are quoted separately based on fleet size and device type.{' '}
           <Link to="/hardware" className="text-teal-700 hover:text-teal-800">
             View hardware options →

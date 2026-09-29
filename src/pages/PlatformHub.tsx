@@ -10,10 +10,10 @@ export default function PlatformHub() {
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Platform' }]} />
         <span className="eyebrow">Platform</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">
           Thirteen modules. One dashboard.
         </h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">
+        <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">
           Every module below reads from a hardware data source and feeds directly into the
           solution it supports — nothing lives in isolation.
         </p>

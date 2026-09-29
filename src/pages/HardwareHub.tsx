@@ -8,10 +8,10 @@ export default function HardwareHub() {
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Hardware' }]} />
         <span className="eyebrow">Hardware</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
-          The devices every reading starts with.
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">
+          Powering every data point.
         </h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">
+        <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">
           Each device below links to the solutions it powers — check compatibility, then request
           a quote with installation included.
         </p>

@@ -15,8 +15,8 @@ export default function Card({ to, title, summary, tag }: CardProps) {
     >
       <div>
         {tag && <span className="mb-2 inline-block text-xs font-medium text-sky-600">{tag}</span>}
-        <h3 className="font-display text-lg font-semibold text-ink">{title}</h3>
-        <p className="mt-1.5 text-[15px] leading-relaxed text-ink-soft/80">{summary}</p>
+        <h3 className="font-serif text-lg font-semibold text-ink">{title}</h3>
+        <p className="mt-1.5 text-[15px] font-sans leading-relaxed text-ink-soft/80">{summary}</p>
       </div>
       <span className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-700">
         Learn more

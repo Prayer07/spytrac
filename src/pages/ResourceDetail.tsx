@@ -30,13 +30,13 @@ export default function ResourceDetail() {
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Resources', to: '/resources' }, { label: resource.name }]} />
         <span className="eyebrow">{resource.category}</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">{resource.name}</h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">{resource.summary}</p>
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">{resource.name}</h1>
+        <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">{resource.summary}</p>
       </section>
 
       {links.length > 0 && (
         <section className="container-page py-10">
-          <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-teal-700/80">Related pages</h2>
+          <h2 className="font-serif text-sm font-semibold uppercase tracking-wide text-teal-700/80">Related pages</h2>
           <ul className="mt-3 flex flex-wrap gap-3">
             {links.map((l) => (
               <li key={l.to}>
