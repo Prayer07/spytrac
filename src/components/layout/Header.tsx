@@ -116,7 +116,7 @@ export default function Header() {
         <div className="border-t border-teal-900/10 bg-white px-5 pb-6 pt-2 lg:hidden">
           {navGroups.map((group) => (
             <div key={group.label} className="border-b border-teal-900/5 py-3">
-              <Link to={group.to} className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+              <Link to={group.to} className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
                 {group.label}
               </Link>
               <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5">
@@ -134,13 +134,13 @@ export default function Header() {
             </div>
           ))}
           <div className="flex flex-col gap-2 py-3">
-            <Link to="/pricing" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/pricing" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Pricing
             </Link>
-            <Link to="/resources" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/resources" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Resources
             </Link>
-            <Link to="/company" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/company" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Company
             </Link>
           </div>

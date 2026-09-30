@@ -31,8 +31,8 @@ export default function EntityDetail({ hubLabel, hubTo, items, relatedGroups, ey
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: hubLabel, to: hubTo }, { label: item.name }]} />
         <span className="eyebrow">{eyebrow}</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">{item.name}</h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">{item.detail}</p>
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">{item.name}</h1>
+        <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">{item.detail}</p>
       </section>
 
       {groups.length > 0 && (
@@ -40,7 +40,7 @@ export default function EntityDetail({ hubLabel, hubTo, items, relatedGroups, ey
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {groups.map((group) => (
               <div key={group.label}>
-                <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-teal-700/80">
+                <h2 className="font-serif text-sm font-semibold uppercase tracking-wide text-teal-700/80">
                   {group.label}
                 </h2>
                 <ul className="mt-3 space-y-2 border-l border-teal-900/10 pl-4">

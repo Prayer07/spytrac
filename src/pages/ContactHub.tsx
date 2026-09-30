@@ -15,10 +15,10 @@ export default function ContactHub() {
     <section className="container-page py-14">
       <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Contact / Demo' }]} />
       <span className="eyebrow">Contact / Demo</span>
-      <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
+      <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">
         How can we help you get started?
       </h1>
-      <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">
+      <p className="mt-4 max-w-xl text-[15px] font-sans leading-relaxed text-ink-soft/75">
         Pick the option that matches where you are — from a first demo to an existing account
         issue.
       </p>
@@ -30,7 +30,7 @@ export default function ContactHub() {
       </div>
 
       <div className="mt-12 rounded-2xl border border-teal-900/10 bg-teal-50/40 p-6">
-        <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-teal-700/80">
+        <h2 className="font-sans text-sm font-semibold uppercase tracking-wide text-teal-700/80">
           Location / Channels
         </h2>
         <p className="mt-2 text-[15px] text-ink-soft/75">
