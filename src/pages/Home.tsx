@@ -78,15 +78,15 @@ export default function Home() {
         <div className="container-page relative grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:py-28">
           {/* Hero content */}
           <div>
-            <span className="eyebrow text-teal-200">
+            <span className="eyebrow font-sans text-teal-200">
               Fleet telematics · Fleet management · Fuel intelligence
             </span>
 
-            <h1 className="mt-4 max-w-xl font-display text-4xl font-semibold leading-[1.08] text-white sm:text-5xl">
-              Know where every vehicle is, and where your fuel is going.
+            <h1 className="mt-4 max-w-xl font-serif text-4xl font-semibold leading-[1.08] text-white sm:text-5xl">
+              Know every vehicle location, Track every litre, Optimize your operations.
             </h1>
 
-            <p className="mt-5 max-w-md text-[17px] leading-relaxed text-white/75">
+            <p className="mt-5 max-w-md text-[15px] leading-relaxed font-serif text-white/75">
               Spytrac connects live tracking, fuel monitoring and driver
               accountability into one platform, so fleet operators stop
               guessing and start deciding from real data.
@@ -104,15 +104,15 @@ export default function Home() {
       {/* 03 + 04. WHAT SPYTRAC SOLVES + CORE PLATFORM */}
       <section className="container-page py-16 sm:py-20">
         <div className="max-w-xl">
-          <span className="eyebrow">
+          <span className="eyebrow font-sans">
             Data source → module → result
           </span>
 
-          <h2 className="mt-3 font-display text-3xl font-semibold text-ink">
+          <h2 className="mt-3 font-serif text-3xl font-semibold text-ink">
             Every reading turns into an operational decision.
           </h2>
 
-          <p className="mt-3 text-[15px] leading-relaxed text-ink-soft/75">
+          <p className="mt-3 text-[15px] font-serif leading-relaxed text-ink-soft/75">
             Telemetry only matters if it changes what you do next. Here is
             how raw signals move through the platform into results you can
             act on.
@@ -123,19 +123,19 @@ export default function Home() {
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-teal-900/10 bg-teal-50/60 text-ink-soft/70">
-                <th className="px-5 py-3 font-medium">
+                <th className="px-5 py-3 font-sans font-medium">
                   Data Source
                 </th>
 
-                <th className="px-5 py-3 font-medium">
+                <th className="px-5 py-3 font-sans font-medium">
                   Core Module
                 </th>
 
-                <th className="px-5 py-3 font-medium">
+                <th className="px-5 py-3 font-sans font-medium">
                   Business Result
                 </th>
 
-                <th className="px-5 py-3 font-medium" />
+                <th className="px-5 py-3 font-sans font-medium" />
               </tr>
             </thead>
 
@@ -145,19 +145,19 @@ export default function Home() {
                   key={row.coreModule}
                   className="border-b border-teal-900/5 last:border-0"
                 >
-                  <td className="px-5 py-4 align-top font-mono text-[13px] text-ink-soft/70">
+                  <td className="px-5 py-4 align-top font-serif text-[13px] text-ink-soft/70">
                     {row.dataSource}
                   </td>
 
-                  <td className="px-5 py-4 align-top font-medium text-ink">
+                  <td className="px-5 py-4 align-top font-serif font-medium text-ink">
                     {row.coreModule}
                   </td>
 
-                  <td className="px-5 py-4 align-top text-ink-soft/75">
+                  <td className="px-5 py-4 align-top font-serif text-ink-soft/75">
                     {row.businessResult}
                   </td>
 
-                  <td className="px-5 py-4 align-top">
+                  <td className="px-5 py-4 font-sans align-top">
                     <Link
                       to={row.ctaHref}
                       className="whitespace-nowrap text-sm font-medium text-teal-700 hover:text-teal-800"
@@ -179,8 +179,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">Solutions</span>
 
-              <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
-                Pick the problem you're solving first.
+              <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
+                Identify the Problem.
               </h2>
             </div>
 
@@ -208,8 +208,8 @@ export default function Home() {
           <div>
             <span className="eyebrow">Industries</span>
 
-            <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
-              Built around how your sector actually runs.
+            <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
+              Built for Your Industry.
             </h2>
           </div>
 
@@ -239,7 +239,7 @@ export default function Home() {
                 Hardware
               </span>
 
-              <h2 className="mt-2 font-display text-3xl font-semibold text-white">
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-white">
                 The devices behind every reading.
               </h2>
             </div>
@@ -260,11 +260,11 @@ export default function Home() {
                 to={`/hardware/${hw.slug}`}
                 className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-sky-400/40 hover:bg-white/[0.06]"
               >
-                <h3 className="font-display text-base font-semibold text-white">
+                <h3 className="font-serif text-base font-semibold text-white">
                   {hw.name}
                 </h3>
 
-                <p className="mt-1.5 text-sm text-teal-100/70">
+                <p className="mt-1.5 text-sm font-sans text-teal-100/70">
                   {hw.summary}
                 </p>
               </Link>

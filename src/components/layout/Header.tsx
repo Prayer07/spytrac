@@ -94,14 +94,16 @@ export default function Header() {
             Company
           </NavLink>
 
-          <p className='rounded-md px-3 py-2 text-[15px] font-medium text-teal-700'>Contact-Us: 2349037838141</p>
+          <p className='rounded-md px-3 py-2 text-[15px] font-medium text-teal-700'>Contact-Us: <a href="tel:08129747071">08129747071</a></p>
         </nav>
+        
 
         <button
           className="flex h-9 w-9 items-center justify-center rounded-md text-ink lg:hidden"
           aria-label="Toggle menu"
           onClick={() => setMobileOpen((v) => !v)}
         >
+          
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             {mobileOpen ? (
               <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
@@ -114,9 +116,10 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="border-t border-teal-900/10 bg-white px-5 pb-6 pt-2 lg:hidden">
+          
           {navGroups.map((group) => (
             <div key={group.label} className="border-b border-teal-900/5 py-3">
-              <Link to={group.to} className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+              <Link to={group.to} className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
                 {group.label}
               </Link>
               <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5">
@@ -134,18 +137,20 @@ export default function Header() {
             </div>
           ))}
           <div className="flex flex-col gap-2 py-3">
-            <Link to="/pricing" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/pricing" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Pricing
             </Link>
-            <Link to="/resources" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/resources" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Resources
             </Link>
-            <Link to="/company" className="font-display text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            <Link to="/company" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Company
             </Link>
           </div>
+          <p className='rounded-md py-2 text-[15px] font-medium text-teal-700'>Contact-Us: <a href="tel:08129747071">08129747071</a></p>
         </div>
       )}
+      
     </header>
   )
 }

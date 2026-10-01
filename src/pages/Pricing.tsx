@@ -1,62 +1,194 @@
-import { Link } from 'react-router-dom'
-import Breadcrumbs from '../components/ui/Breadcrumbs'
 import Button from '../components/ui/Button'
 import { pricingPlans } from '../data/siteData'
 
-const allFeatures = Array.from(new Set(pricingPlans.flatMap((p) => p.features)))
+const formatNaira = (amount: number) =>
+  new Intl.NumberFormat('en-NG', {
+    style: 'currency',
+    currency: 'NGN',
+    maximumFractionDigits: amount % 1 === 0 ? 0 : 2,
+  }).format(amount)
 
 export default function Pricing() {
   return (
     <>
       <section className="container-page pt-10">
-        <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Pricing' }]} />
+
         <span className="eyebrow">Pricing</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
-          Plan names stay flexible. What you need doesn't.
+
+        <h1 className="mt-2 max-w-3xl font-serif text-4xl font-semibold text-ink">
+          Vehicle tracking plans built for every fleet.
         </h1>
-        <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-soft/75">
-          Every plan includes hardware compatibility guidance and installation support. Add-ons
-          and modules can be layered onto any tier as your fleet grows.
+
+        <p className="mt-4 max-w-2xl text-[15px] font-sans leading-relaxed text-ink-soft/75">
+          Choose the Spytrac package that fits your vehicle tracking,
+          monitoring, fleet management and security requirements.
         </p>
       </section>
 
       <section className="container-page py-12">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {pricingPlans.map((plan) => (
             <div
               key={plan.slug}
               className={`flex flex-col rounded-2xl border p-7 ${
-                plan.highlighted ? 'border-teal-600 bg-teal-700 text-white shadow-panel' : 'border-teal-900/10 bg-white'
+                plan.highlighted
+                  ? 'border-teal-600 bg-teal-700 text-white shadow-panel'
+                  : 'border-teal-900/10 bg-white'
               }`}
             >
-              <h2 className={`font-display text-xl font-semibold ${plan.highlighted ? 'text-white' : 'text-ink'}`}>
-                {plan.name}
-              </h2>
-              <p className={`mt-1 text-sm ${plan.highlighted ? 'text-teal-100' : 'text-ink-soft/70'}`}>
-                {plan.positioning}
-              </p>
+              <div>
+                <h2
+                  className={`font-serif text-xl font-semibold ${
+                    plan.highlighted ? 'text-white' : 'text-ink'
+                  }`}
+                >
+                  {plan.name}
+                </h2>
+
+                <p
+                  className={`mt-1 font-sans text-sm ${
+                    plan.highlighted
+                      ? 'text-teal-100'
+                      : 'text-ink-soft/70'
+                  }`}
+                >
+                  {plan.positioning}
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <p
+                  className={`font-sans text-xs uppercase tracking-wide ${
+                    plan.highlighted
+                      ? 'text-teal-100'
+                      : 'text-ink-soft/60'
+                  }`}
+                >
+                  Total
+                </p>
+
+                <p
+                  className={`mt-1 font-serif text-3xl font-semibold ${
+                    plan.highlighted ? 'text-white' : 'text-ink'
+                  }`}
+                >
+                  {formatNaira(plan.price)}
+                </p>
+
+                <p
+                  className={`mt-1 text-xs ${
+                    plan.highlighted
+                      ? 'text-teal-100'
+                      : 'text-ink-soft/60'
+                  }`}
+                >
+                  Includes 7.5% VAT
+                </p>
+              </div>
+
+              <div
+                className={`mt-6 space-y-2 border-y py-4 text-sm ${
+                  plan.highlighted
+                    ? 'border-white/15'
+                    : 'border-teal-900/10'
+                }`}
+              >
+                <div className="flex justify-between gap-4">
+                  <span
+                    className={
+                      plan.highlighted
+                        ? 'text-teal-100'
+                        : 'text-ink-soft/70'
+                    }
+                  >
+                    Tracking device
+                  </span>
+
+                  <span className="font-medium">
+                    {formatNaira(plan.deviceCost)}
+                  </span>
+                </div>
+
+                <div className="flex justify-between gap-4">
+                  <span
+                    className={
+                      plan.highlighted
+                        ? 'text-teal-100'
+                        : 'text-ink-soft/70'
+                    }
+                  >
+                    Annual subscription
+                  </span>
+
+                  <span className="font-medium">
+                    {formatNaira(plan.annualSubscription)}
+                  </span>
+                </div>
+
+                <div className="flex justify-between gap-4">
+                  <span
+                    className={
+                      plan.highlighted
+                        ? 'text-teal-100'
+                        : 'text-ink-soft/70'
+                    }
+                  >
+                    Installation
+                  </span>
+
+                  <span className="font-medium">
+                    {formatNaira(plan.installation)}
+                  </span>
+                </div>
+              </div>
+
               <ul className="mt-6 flex-1 space-y-3">
-                {plan.features.map((f) => (
+                {plan.features.map((feature) => (
                   <li
-                    key={f}
-                    className={`flex items-start gap-2 text-sm ${plan.highlighted ? 'text-teal-50' : 'text-ink-soft/80'}`}
+                    key={feature}
+                    className={`flex items-start gap-2 font-sans text-sm ${
+                      plan.highlighted
+                        ? 'text-teal-50'
+                        : 'text-ink-soft/80'
+                    }`}
                   >
                     <svg
-                      className={`mt-0.5 h-4 w-4 flex-shrink-0 ${plan.highlighted ? 'text-sky-300' : 'text-teal-600'}`}
+                      className={`mt-0.5 h-4 w-4 flex-shrink-0 ${
+                        plan.highlighted
+                          ? 'text-sky-300'
+                          : 'text-teal-600'
+                      }`}
                       viewBox="0 0 16 16"
                       fill="none"
+                      aria-hidden="true"
                     >
-                      <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M3 8.5l3 3 7-7"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
-                    {f}
+
+                    {feature}
                   </li>
                 ))}
               </ul>
+
               <Button
-                to={plan.cta === 'Get Started' ? '/contact' : plan.cta === 'Request Quote' ? '/contact/quote' : '/contact/demo'}
+                to={
+                  plan.cta === 'Get Started'
+                    ? 'https://wa.me/2349037838141?text=Can%20I%20get%20a%20demo%20on%20Spytrac'
+                    : plan.cta === 'Request Quote'
+                      ? 'https://wa.me/2349037838141?text=I%20would%20like%20to%20request%20a%20quote%20for%20Spytrac'
+                      : 'https://wa.me/2349037838141?text=Can%20I%20get%20a%20demo%20on%20Spytrac'
+                }
                 variant="secondary"
                 className={`mt-7 w-full ${
-                  plan.highlighted ? '!border-transparent !bg-white !text-teal-700 hover:!bg-teal-50' : ''
+                  plan.highlighted
+                    ? '!border-transparent !bg-white !text-teal-700 hover:!bg-teal-50'
+                    : ''
                 }`}
               >
                 {plan.cta}
@@ -64,46 +196,6 @@ export default function Pricing() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="container-page pb-16">
-        <h2 className="font-display text-2xl font-semibold text-ink">Feature comparison</h2>
-        <div className="mt-6 overflow-x-auto rounded-2xl border border-teal-900/10">
-          <table className="w-full min-w-[640px] border-collapse text-left text-sm">
-            <thead>
-              <tr className="border-b border-teal-900/10 bg-teal-50/60">
-                <th className="px-5 py-3 font-medium text-ink-soft/70">Feature</th>
-                {pricingPlans.map((p) => (
-                  <th key={p.slug} className="px-5 py-3 text-center font-medium text-ink-soft/70">
-                    {p.name}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {allFeatures.map((feature) => (
-                <tr key={feature} className="border-b border-teal-900/5 last:border-0">
-                  <td className="px-5 py-3 text-ink-soft/80">{feature}</td>
-                  {pricingPlans.map((p) => (
-                    <td key={p.slug} className="px-5 py-3 text-center">
-                      {p.features.includes(feature) ? (
-                        <span className="text-teal-600">✓</span>
-                      ) : (
-                        <span className="text-ink-soft/25">—</span>
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-4 text-sm text-ink-soft/60">
-          Hardware and installation are quoted separately based on fleet size and device type.{' '}
-          <Link to="/hardware" className="text-teal-700 hover:text-teal-800">
-            View hardware options →
-          </Link>
-        </p>
       </section>
     </>
   )

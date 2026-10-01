@@ -13,7 +13,6 @@ const utilityLinks = [
   { label: 'Resources', to: '/resources' },
   { label: 'Company', to: '/company' },
   { label: 'Support', to: '/resources/help-centre' },
-  { label: 'Login', to: '/login' },
 ]
 
 export default function Footer() {
@@ -22,7 +21,7 @@ export default function Footer() {
       <div className="container-page grid grid-cols-2 gap-8 py-14 sm:grid-cols-3 lg:grid-cols-6">
         {footerColumns.map((col) => (
           <div key={col.title}>
-            <h4 className="font-display text-sm font-semibold text-ink">{col.title}</h4>
+            <h4 className="font-sans text-sm font-semibold text-ink">{col.title}</h4>
             <ul className="mt-3 space-y-2">
               {col.items.map((item) => (
                 <li key={item.slug}>
@@ -35,7 +34,7 @@ export default function Footer() {
           </div>
         ))}
         <div>
-          <h4 className="font-display text-sm font-semibold text-ink">Company</h4>
+          <h4 className="font-sans text-sm font-semibold text-ink">Company</h4>
           <ul className="mt-3 space-y-2">
             {utilityLinks.map((link) => (
               <li key={link.label}>

@@ -49,7 +49,7 @@ export default function Company() {
       <section className="container-page pt-10">
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Company' }]} />
         <span className="eyebrow">Company</span>
-        <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold text-ink">
+        <h1 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink">
           The team behind the platform.
         </h1>
       </section>
@@ -58,8 +58,8 @@ export default function Company() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
           {sections.map((s) => (
             <div key={s.id} id={s.id} className="scroll-mt-24 border-t border-teal-900/10 pt-5">
-              <h2 className="font-display text-lg font-semibold text-ink">{s.title}</h2>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink-soft/75">{s.body}</p>
+              <h2 className="font-serif text-lg font-semibold text-ink">{s.title}</h2>
+              <p className="mt-2 text-[15px] font-sans leading-relaxed text-ink-soft/75">{s.body}</p>
             </div>
           ))}
         </div>

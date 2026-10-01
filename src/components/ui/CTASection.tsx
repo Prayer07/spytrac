@@ -21,7 +21,7 @@ export default function CTASection({
     <section className="border-t border-teal-900/10 bg-teal-950">
       <div className="container-page flex flex-col items-start gap-6 py-16 sm:flex-row sm:items-center sm:justify-between">
         <div className="max-w-lg">
-          <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">{heading}</h2>
+          <h2 className="font-serif text-2xl font-semibold text-white sm:text-3xl">{heading}</h2>
           {body && <p className="mt-3 text-[15px] leading-relaxed text-teal-100/80">{body}</p>}
         </div>
         <div className="flex flex-shrink-0 flex-wrap gap-3">
