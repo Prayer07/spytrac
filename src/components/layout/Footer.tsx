@@ -13,7 +13,6 @@ const utilityLinks = [
   { label: 'Resources', to: '/resources' },
   { label: 'Company', to: '/company' },
   { label: 'Support', to: '/resources/help-centre' },
-  { label: 'Login', to: '/login' },
 ]
 
 export default function Footer() {
