@@ -353,41 +353,6 @@ export interface PricingPlan {
   highlighted?: boolean
 }
 
-export const pricingPlans: PricingPlan[] = [
-  {
-    slug: 'lite-basic',
-    name: 'Lite / Basic',
-    positioning: 'Essential tracking',
-    features: ['Live tracking', 'Basic alerts', 'Geofencing', 'Basic reports', 'Mobile app access'],
-    cta: 'Get Started',
-  },
-  {
-    slug: 'standard',
-    name: 'Standard',
-    positioning: 'Fleet operations',
-    features: [
-      'Everything in Lite',
-      'Advanced analytics',
-      'Fuel monitoring',
-      'Maintenance reminders',
-      'Operational modules as applicable',
-    ],
-    cta: 'Request Quote',
-    highlighted: true,
-  },
-  {
-    slug: 'premium',
-    name: 'Premium',
-    positioning: 'Advanced fleet intelligence',
-    features: [
-      'Everything in Standard',
-      'Advanced driver behaviour scoring',
-      'Tire management',
-      'Video / other premium capabilities as applicable',
-    ],
-    cta: 'Request Demo',
-  },
-]
 
 export interface ResourceItem {
   slug: string
@@ -487,3 +452,214 @@ export const seoGroups = [
 export function findBySlug<T extends { slug: string }>(items: T[], slug: string | undefined) {
   return items.find((item) => item.slug === slug)
 }
+
+
+export interface PricingPlan {
+  slug: string
+  name: string
+  positioning: string
+  price: number
+  deviceCost: number
+  annualSubscription: number
+  installation: number
+  features: string[]
+  cta: string
+  highlighted?: boolean
+}
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    slug: 'basic-b2b2c',
+    name: 'Spytrac Basic',
+    positioning: 'For leasing, insurance and hire purchase',
+    price: 48375,
+    deviceCost: 25000,
+    annualSubscription: 12000,
+    installation: 8000,
+    features: [
+      'Real-time monitoring and status management',
+      'Online dashboard for mobile and website',
+      'Real-time vehicle status updates',
+      'Playback vehicle movement',
+      'Report generation',
+      'In-app alerts',
+      'Vehicle shutdown and release',
+      'Geofencing',
+      'Point of Interest indications and setup',
+      'Fuel information based on mileage',
+      'Expense recording',
+      'Repair recording',
+    ],
+    cta: 'Get Started',
+  },
+
+  {
+    slug: 'basic-b2c',
+    name: 'Spytrac Basic',
+    positioning: 'For individual vehicle owners',
+    price: 79012.5,
+    deviceCost: 45000,
+    annualSubscription: 18500,
+    installation: 10000,
+    features: [
+      'Real-time monitoring and status management',
+      'Online dashboard for mobile and website',
+      'Real-time vehicle status updates',
+      'Playback vehicle movement',
+      'Report generation',
+      'In-app alerts',
+      'Vehicle shutdown and release',
+      'Geofencing',
+      'Point of Interest indications and setup',
+      'Fuel information based on mileage',
+      'Expense recording',
+      'Repair recording',
+    ],
+    cta: 'Get Started',
+  },
+
+  {
+    slug: 'lite-b2b2c',
+    name: 'Spytrac Lite',
+    positioning: 'Fleet monitoring and management',
+    price: 83635,
+    deviceCost: 45000,
+    annualSubscription: 22800,
+    installation: 10000,
+    features: [
+      'Real-time monitoring and status management',
+      'Online dashboard for mobile and website',
+      'Real-time vehicle status updates',
+      'Playback vehicle movement',
+      'Report generation',
+      'Live trip sharing with 3rd parties',
+      'Live road traffic',
+      'In-app alerts',
+      'In-app, email and SMS notifications',
+      'Vehicle shutdown and release',
+      'Vehicle information database',
+      'Geofencing',
+      'Point of Interest indications and setup',
+      'Driver particulars database and management',
+      'Vehicle / driver pairing',
+      'Odometer/mileage-based maintenance reminders',
+      'Vehicle particulars renewal reminders',
+      'Expense recording and tracking',
+      'Repair, purchases and other cost upload',
+      'Vehicle expense and purchase database',
+      'Fuel and other expense cost analysis',
+      'Fuel information based on mileage',
+      'Optional job/task notification and reception',
+      'Optional expense recording',
+      'Optional repair recording',
+    ],
+    cta: 'Request Quote',
+  },
+
+  {
+    slug: 'lite-b2b',
+    name: 'Spytrac Lite',
+    positioning: 'Fleet monitoring and management',
+    price: 94385,
+    deviceCost: 55000,
+    annualSubscription: 22800,
+    installation: 10000,
+    features: [
+      'Real-time monitoring and status management',
+      'Online dashboard for mobile and website',
+      'Real-time vehicle status updates',
+      'Playback vehicle movement',
+      'Report generation',
+      'Live trip sharing with 3rd parties',
+      'Live road traffic',
+      'In-app alerts',
+      'In-app, email and SMS notifications',
+      'Vehicle shutdown and release',
+      'Vehicle information database',
+      'Geofencing',
+      'Point of Interest indications and setup',
+      'Driver particulars database and management',
+      'Vehicle / driver pairing',
+      'Odometer/mileage-based maintenance reminders',
+      'Vehicle particulars renewal reminders',
+      'Expense recording and tracking',
+      'Repair, purchases and other cost upload',
+      'Vehicle expense and purchase database',
+      'Fuel and other expense cost analysis',
+      'Fuel information based on mileage',
+      'Third-party software API integration',
+      'Job/task notification and reception',
+      'Expense recording',
+      'Repair recording',
+    ],
+    cta: 'Request Quote',
+    highlighted: true,
+  },
+
+  {
+    slug: 'standard-b2b',
+    name: 'Spytrac Standard',
+    positioning: 'Advanced fleet operations',
+    price: 118250,
+    deviceCost: 55000,
+    annualSubscription: 45000,
+    installation: 10000,
+    features: [
+      'Everything in Lite B2B',
+      'Automated scheduled email report sending',
+      'Restricted driving hours setup',
+      'Restricted driver habit monitoring',
+      'Third-party software API integration',
+      'Job/task notification and reception',
+      'Expense recording',
+      'Repair recording',
+    ],
+    cta: 'Request Quote',
+  },
+
+  {
+    slug: 'premium-b2b',
+    name: 'Spytrac Premium',
+    positioning: 'Advanced fleet intelligence and fuel management',
+    price: 225750,
+    deviceCost: 100000,
+    annualSubscription: 75000,
+    installation: 35000,
+    features: [
+      'Everything in Standard B2B',
+      'Automated scheduled email report sending',
+      'Restricted driving hours setup',
+      'Restricted driver habit monitoring',
+      'Fuel level information',
+      'Refuel information — when and where',
+      'Fuel theft detection — when and where',
+      'Fuel consumption reports',
+      'Review camera solution',
+      'Front-view camera solution / dash cam',
+      'FRSC vehicle certificate',
+      'Advanced vehicle and driver management',
+      'Vehicle information database',
+      'Driver particulars database and management',
+      'Vehicle / driver pairing',
+      'Maintenance reminders',
+      'Expense recording and tracking',
+      'Repair, purchases and other cost upload',
+    ],
+    cta: 'Request Demo',
+  },
+
+  {
+    slug: 'speed-limiter',
+    name: 'Speed Limiter Solution',
+    positioning: 'Vehicle speed control',
+    price: 65037.5,
+    deviceCost: 45000,
+    annualSubscription: 7000,
+    installation: 8500,
+    features: [
+      'Speed accelerator controller',
+      'Vehicle information database',
+    ],
+    cta: 'Request Quote',
+  },
+]
