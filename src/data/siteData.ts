@@ -21,7 +21,7 @@ export const solutions: LinkedItem[] = [
     name: 'Fleet Management',
     summary: 'One operating picture for every vehicle you run.',
     detail:
-      'Bring every vehicle, driver and job into a single live view. Fleet Management is the home base for daily operations — where a vehicle is, what it is doing, and whether it is on schedule.',
+      `Fleet Management: is managing a company's/client's vehicles to guarantee work efficiency, vehicle safety and cost efficiency.`,
     relatedPlatform: ['live-tracking', 'reports-analytics', 'jobs'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['logistics-transport', 'corporate-fleets'],
@@ -29,9 +29,9 @@ export const solutions: LinkedItem[] = [
   {
     slug: 'fuel-monitoring',
     name: 'Fuel Monitoring & Fuel Theft',
-    summary: 'See every litre — consumption, refuelling and drains.',
+    summary: 'See every litre consumption, refuelling and drains.',
     detail:
-      'Fuel Monitoring reads directly from a fuel sensor or vehicle signal to show consumption trends, refuelling events and sudden drops that point to siphoning or theft, so fuel loss stops being an invisible cost.',
+      'Fuel monitoring and theft: tracking fuel consumption, fuel refuelling (at what point was it refilled, the level it was before refill and after), track fuel theft and wasteful driving',
     relatedPlatform: ['fuel-graph', 'alerts', 'reports-analytics'],
     relatedHardware: ['fuel-sensors'],
     relatedIndustries: ['logistics-transport', 'oil-gas-energy'],
@@ -51,7 +51,7 @@ export const solutions: LinkedItem[] = [
     name: 'Asset Tracking',
     summary: 'Extend visibility to equipment that doesn\u2019t have an engine.',
     detail:
-      'Track generators, containers, trailers and equipment that move between sites, with battery-powered trackers built for assets that sit idle for long stretches.',
+      `Asset tracking: using GPS to track assets, know their location in real-time, speed and route take. Playback options to track back all places asset has been`,
     relatedPlatform: ['geofences', 'live-tracking'],
     relatedHardware: ['asset-trackers'],
     relatedIndustries: ['construction', 'oil-gas-energy'],
@@ -61,7 +61,7 @@ export const solutions: LinkedItem[] = [
     name: 'Driver Safety & Behaviour',
     summary: 'Turn harsh braking and speeding into coachable data.',
     detail:
-      'Score driving events — harsh braking, rapid acceleration, speeding, idling — and turn them into reports you can use for coaching, insurance conversations and accountability.',
+      `Driver behavior: involves monitoring driver's speed, harsh cornering and acceleration, and harsh braking.`,
     relatedPlatform: ['driver-behaviour', 'alerts', 'reports-analytics'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['schools-staff-transport', 'corporate-fleets'],
