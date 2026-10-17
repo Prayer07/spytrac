@@ -21,7 +21,8 @@ export const solutions: LinkedItem[] = [
     name: 'Fleet Management',
     summary: 'One operating picture for every vehicle you run.',
     detail:
-      `Fleet Management: is managing a company's/client's vehicles to guarantee work efficiency, vehicle safety and cost efficiency.`,
+      `Fleet management is the oversight of a company's or client's vehicles
+       to ensure operational efficiency, vehicle safety, and cost-effectiveness. In essence, everything we do falls under fleet management`,
     relatedPlatform: ['live-tracking', 'reports-analytics', 'jobs'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['logistics-transport', 'corporate-fleets'],
@@ -31,7 +32,7 @@ export const solutions: LinkedItem[] = [
     name: 'Fuel Monitoring & Fuel Theft',
     summary: 'See every litre consumption, refuelling and drains.',
     detail:
-      'Fuel monitoring and theft: tracking fuel consumption, fuel refuelling (at what point was it refilled, the level it was before refill and after), track fuel theft and wasteful driving',
+      'Tracks fuel consumption in real time and records every refuelling event, including the location, time, and fuel levels before and after. Detects suspected fuel theft and identifies inefficient driving behaviours that contribute to excess fuel usage.',
     relatedPlatform: ['fuel-graph', 'alerts', 'reports-analytics'],
     relatedHardware: ['fuel-sensors'],
     relatedIndustries: ['logistics-transport', 'oil-gas-energy'],
@@ -51,7 +52,7 @@ export const solutions: LinkedItem[] = [
     name: 'Asset Tracking',
     summary: 'Extend visibility to equipment that doesn\u2019t have an engine.',
     detail:
-      `Asset tracking: using GPS to track assets, know their location in real-time, speed and route take. Playback options to track back all places asset has been`,
+      `Asset tracking uses GPS to monitor assets in real time, showing their location, speed, and the route taken. Playback features let you review the full history of everywhere an asset has been.`,
     relatedPlatform: ['geofences', 'live-tracking'],
     relatedHardware: ['asset-trackers'],
     relatedIndustries: ['construction', 'oil-gas-energy'],
@@ -61,7 +62,7 @@ export const solutions: LinkedItem[] = [
     name: 'Driver Safety & Behaviour',
     summary: 'Turn harsh braking and speeding into coachable data.',
     detail:
-      `Driver behavior: involves monitoring driver's speed, harsh cornering and acceleration, and harsh braking.`,
+      `Tracks key driving habits, including speeding, harsh cornering, rapid acceleration, and hard braking, to promote safer and more efficient driving.`,
     relatedPlatform: ['driver-behaviour', 'alerts', 'reports-analytics'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['schools-staff-transport', 'corporate-fleets'],
@@ -71,7 +72,7 @@ export const solutions: LinkedItem[] = [
     name: 'Maintenance',
     summary: 'Service reminders based on how vehicles actually run.',
     detail:
-      'Set service intervals by mileage or engine hours and get ahead of breakdowns with reminders, repair logs and a full maintenance history per vehicle.',
+      'Enables scheduled service reminders so vehicles are maintained on time. Also covers upkeep of the tracking devices and fuel sensors, helping to identify and correct faults such as malfunctioning trackers or inaccurate fuel readings.',
     relatedPlatform: ['maintenance-repairs', 'reports-analytics'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['logistics-transport', 'construction'],
@@ -91,7 +92,7 @@ export const solutions: LinkedItem[] = [
     name: 'Jobs / Dispatch',
     summary: 'Assign, track and confirm field work in one flow.',
     detail:
-      'Dispatch jobs to drivers, track progress against planned stops, and confirm completion automatically using geofence and tracking data.',
+      'Assigns and tracks deliveries from dispatch to completion, linking each job to a specific driver and destination or client. Monitors progress to ensure on-time delivery to the correct recipient, while using geofencing to detect unauthorised stops or deviations from the planned route.',
     relatedPlatform: ['jobs', 'geofences', 'live-tracking'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['logistics-transport'],
