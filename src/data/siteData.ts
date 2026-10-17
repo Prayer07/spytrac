@@ -62,7 +62,7 @@ export const solutions: LinkedItem[] = [
     name: 'Driver Safety & Behaviour',
     summary: 'Turn harsh braking and speeding into coachable data.',
     detail:
-      `Tracks key driving habits, including speeding, harsh cornering, rapid acceleration, and hard braking, to promote safer and more efficient driving.`,
+      `Monitors HOW drivers drive, not just WHERE. Monitor: Overspeeding, Harsh Braking/Acceleration/Cornering, Idling, Fatigue, Safety Extras: Seatbelt, night driving, restricted zones`,
     relatedPlatform: ['driver-behaviour', 'alerts', 'reports-analytics'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['schools-staff-transport', 'corporate-fleets'],
@@ -82,7 +82,7 @@ export const solutions: LinkedItem[] = [
     name: 'Tire Management',
     summary: 'Track tire life, inspections and cost per vehicle.',
     detail:
-      'Log inspections, rotations and replacements, and connect tire condition to safety and total cost of ownership across the fleet.',
+      `Using your GPS tracking system to make tires last longer and catch problems early. Monitor: Pressure Monitoring (TPMS), Overspeeding Alerts, Harsh Braking / Cornering, Mileage Tracking, Overloading / Route Abuse`,
     relatedPlatform: ['tires'],
     relatedHardware: ['vehicle-trackers'],
     relatedIndustries: ['logistics-transport'],
