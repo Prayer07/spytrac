@@ -11,7 +11,7 @@ import HardwareHub from './pages/HardwareHub'
 import HardwareDetail from './pages/HardwareDetail'
 import IndustriesHub from './pages/IndustriesHub'
 import IndustryDetail from './pages/IndustryDetail'
-import Pricing from './pages/Pricing'
+// import Pricing from './pages/Pricing'
 import ResourcesHub from './pages/ResourcesHub'
 import ResourceDetail from './pages/ResourceDetail'
 import Company from './pages/Company'
@@ -47,7 +47,7 @@ export default function App() {
         <Route path="/industries" element={<IndustriesHub />} />
         <Route path="/industries/:slug" element={<IndustryDetail />} />
 
-        <Route path="/pricing" element={<Pricing />} />
+        {/* <Route path="/pricing" element={<Pricing />} /> */}
 
         <Route path="/resources" element={<ResourcesHub />} />
         <Route path="/resources/:slug" element={<ResourceDetail />} />

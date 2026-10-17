@@ -69,14 +69,14 @@ export default function Header() {
               )}
             </div>
           ))}
-          <NavLink
+          {/* <NavLink
             to="/pricing"
             className={({ isActive }) =>
               `rounded-md px-3 py-2 text-[15px] font-medium ${isActive ? 'text-teal-700' : 'text-ink-soft hover:text-teal-700'}`
             }
           >
             Pricing
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/resources"
             className={({ isActive }) =>
@@ -137,9 +137,9 @@ export default function Header() {
             </div>
           ))}
           <div className="flex flex-col gap-2 py-3">
-            <Link to="/pricing" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
+            {/* <Link to="/pricing" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Pricing
-            </Link>
+            </Link> */}
             <Link to="/resources" className="font-sans text-[15px] font-semibold text-ink" onClick={() => setMobileOpen(false)}>
               Resources
             </Link>
